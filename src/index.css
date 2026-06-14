@@ -1,0 +1,81 @@
+@import url("https://fonts.googleapis.com/css2?family=Pacifico&display=swap");
+@import "tailwindcss";
+
+body {
+  font-family: "poppins", sans-serif;
+  /* background-color: #000;
+  overflow: hidden;
+  font-family: "Orbitron", sans-serif; */
+}
+
+h1,
+h2 {
+  font-family: "Roboto", sans-serif;
+}
+
+@layer utilities {
+  .gradient {
+    background: linear-gradient(-45deg, #050a30, #003366, #1a5dff, #00e0ff);
+  }
+
+  /* Rotating glow ring */
+  .ring-animation {
+    border: 2px solid rgba(0, 224, 255, 0.4);
+    box-shadow: 0 0 15px #00e0ff, 0 0 30px #1a5dff;
+    animation: rotateRing 4s linear infinite;
+  }
+
+  @keyframes rotateRing {
+    0% {
+      transform: rotate(0deg) scale(1);
+    }
+    100% {
+      transform: rotate(360deg) scale(1);
+    }
+  }
+
+  /* Neon ripple on hover */
+  .ripple-animation {
+    border: 2px solid rgba(0, 224, 255, 0.3);
+    opacity: 0;
+  }
+
+  .ripple-animation:hover {
+    animation: rippleEffect 0.8s ease-out;
+  }
+
+  @keyframes rippleEffect {
+    0% {
+      transform: scale(1);
+      opacity: 0.6;
+    }
+    100% {
+      transform: scale(1.7);
+      opacity: 0;
+    }
+  }
+
+  /* 3D tilt */
+  .icon-tilt:hover {
+    transform: perspective(300px) rotateX(10deg) rotateY(10deg);
+    transition: transform 0.25s ease-out;
+  }
+
+  /* @keyframes glowLogo {
+    0%,
+    100% {
+      filter: drop-shadow(0 0 10px #00fff0) drop-shadow(0 0 25px #8a2be2)
+        drop-shadow(0 0 45px #00fff0) drop-shadow(0 0 60px #8a2be2);
+      opacity: 1;
+    }
+    50% {
+      filter: drop-shadow(0 0 20px #ffffff) drop-shadow(0 0 45px #8a2be2)
+        drop-shadow(0 0 80px #00e0ff) drop-shadow(0 0 100px #8a2be2);
+      opacity: 0.95;
+    }
+  }
+
+  .animate-glowLogo {
+    animation: glowLogo 1.85s ease-out infinite;
+  } */
+}
