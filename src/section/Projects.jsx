@@ -40,7 +40,7 @@ export default function Projects() {
         image: isMobile ? photo1 : img1,
       },
       {
-        title: "SnapLink - Smart URL_Shortener",
+        title: "SnapLink",
         link: "https://url-shortfrontend.vercel.app/",
         bgColor: "#3884d3",
         image: isMobile ? photo2 : img2,
