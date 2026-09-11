@@ -1,6 +1,6 @@
 import { motion } from "framer-motion";
 import React from "react";
-import s4 from "../assets/s4.png";
+import s5 from "../assets/s5.png";
 
 export default function About() {
   const stats = [
@@ -43,7 +43,7 @@ export default function About() {
             whileHover={{ scale: 1.08 }}
             transition={{ type: "spring", stiffness: 200, damping: 18 }}
           >
-            <img src={s4} alt="profile" className="absolute inset-0" />
+            <img src={s5} alt="profile" className="absolute inset-0" />
           </motion.div>
 
           <div className="flex-1 flex flex-col justify-center text-center md:text-left">
