@@ -9,6 +9,8 @@ import img1 from "../assets/img1.png";
 import photo1 from "../assets/photo1.png";
 import img2 from "../assets/img2.png";
 import photo2 from "../assets/photo2.png";
+import img3 from "../assets/img3.png";
+import photo3 from "../assets/photo3.png";
 
 const useIsMobile = (query = "(max-width : 639px)") => {
   const [isMobile, setIsMobile] = useState(
@@ -34,16 +36,22 @@ export default function Projects() {
   const projects = useMemo(
     () => [
       {
-        title: "Todo list",
-        link: "https://to-do-list-a2cu.vercel.app/",
-        bgColor: "#211342",
-        image: isMobile ? photo1 : img1,
-      },
-      {
         title: "SnapLink",
         link: "https://url-shortfrontend.vercel.app/",
         bgColor: "#3884d3",
         image: isMobile ? photo2 : img2,
+      },
+      {
+        title: "CRUDX",
+        link: "https://crudx-lyart.vercel.app/",
+        bgColor: "#003B8E",
+        image: isMobile ? photo3 : img3,
+      },
+      {
+        title: "Todo list",
+        link: "https://to-do-list-a2cu.vercel.app/",
+        bgColor: "#211342",
+        image: isMobile ? photo1 : img1,
       },
     ],
     [isMobile],
