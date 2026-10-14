@@ -61,14 +61,18 @@ export default function Projects() {
     target: sceneRef,
     offset: ["start start", "end end"],
   });
-  const thresholds = projects.map((_, i) => (i + 1) / projects.length);
+  // const thresholds = projects.map((_, i) => (i + 1) / projects.length);
   const [activeIndex, setActiveIndex] = useState(0);
 
-  useMotionValueEvent(scrollYProgress, "change", (v) => {
-    const idx = thresholds.findIndex((t) => v <= t);
-    setActiveIndex(idx === -1 ? thresholds.length - 1 : idx);
-  });
+  // useMotionValueEvent(scrollYProgress, "change", (v) => {
+  //   const idx = thresholds.findIndex((t) => v <= t);
+  //   setActiveIndex(idx === -1 ? thresholds.length - 1 : idx);
+  // });
 
+  useMotionValueEvent(scrollYProgress, "change", (v) => {
+    const idx = Math.min(Math.floor(v * projects.length), projects.length - 1);
+    setActiveIndex(idx);
+  });
   const activeProject = projects[activeIndex];
 
   return (
